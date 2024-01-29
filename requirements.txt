@@ -36,6 +36,7 @@ exceptiongroup==1.1.2
 executing==1.2.0
 fastjsonschema==2.18.0
 Flask==2.3.2
+flask_cors
 flatbuffers==23.5.26
 fonttools==4.43.1
 fqdn==1.5.1

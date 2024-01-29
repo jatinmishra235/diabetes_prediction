@@ -3,6 +3,7 @@ import logging
 import pandas as pd
 import pickle
 import os
+from flask_cors import cross_origin
 
 logging.basicConfig(filename='diabetes.log', level=logging.INFO)
 
@@ -15,11 +16,12 @@ print(current_script_path)
 print(app_root)
 
 @app.route("/", methods = ["GET"])
-
+@cross_origin()
 def homepage():
     return render_template("index.html")
 
 @app.route("/predict", methods= ["GET","POST"])
+@cross_origin()
 def predictDiabetes():
     if request.method == "POST":
         Pregnancies = request.form.get('Pregnancies')
