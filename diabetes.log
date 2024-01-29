@@ -723,3 +723,56 @@ INFO:root:prediction is Congratulations!! you don't have diabetes
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2024 20:44:42] "POST /predict HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2024 20:44:42] "[33mGET /style.css HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2024 20:44:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:12] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:got all data..
+INFO:root:got predictions!!
+INFO:root:prediction is Congratulations!! you don't have diabetes
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:43] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:44] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:got all data..
+INFO:root:got predictions!!
+INFO:root:prediction is Congratulations!! you don't have diabetes
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:49:38] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:49:38] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:49:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:got all data..
+INFO:root:got predictions!!
+ERROR:application:Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\practice\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\anaconda3\envs\practice\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\anaconda3\envs\practice\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\anaconda3\envs\practice\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "c:/Users/user/Desktop/Diabetes_prediction/application.py", line 51, in predictDiabetes
+    logging.info(f"prediction is {message}")
+UnboundLocalError: local variable 'message' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:57:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:got all data..
+INFO:root:got predictions!!
+INFO:root:prediction is Congratulations!! you don't have diabetes
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:58:58] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:58:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Jan/2024 20:58:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

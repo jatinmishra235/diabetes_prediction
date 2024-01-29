@@ -2,12 +2,20 @@ from flask import Flask, jsonify, request, render_template
 import logging
 import pandas as pd
 import pickle
+import os
 
 logging.basicConfig(filename='diabetes.log', level=logging.INFO)
 
 app = Flask(__name__)
 
+current_script_path = os.path.abspath(__file__)
+app_root = os.path.dirname(current_script_path)
+
+print(current_script_path)
+print(app_root)
+
 @app.route("/", methods = ["GET"])
+
 def homepage():
     return render_template("index.html")
 
@@ -27,7 +35,9 @@ def predictDiabetes():
 
         logging.info("got all data..")
 
-        with open(r'C:\Users\user\Desktop\Diabetes_prediction\models\diabetes_logistic_reg.pkl', 'rb') as model_file:
+        model_path = os.path.join(app_root, 'models', 'diabetes_logistic_reg.pkl')
+
+        with open(model_path, 'rb') as model_file:
             model = pickle.load(model_file)
 
         pred = model.predict(df)
@@ -35,13 +45,13 @@ def predictDiabetes():
         logging.info('got predictions!!')
 
         if pred == 0:
-            messege = "Congratulations!! you don't have diabetes"
+            message = "Congratulations!! you don't have diabetes"
         else:
-            messege = "Oops, you have Diabetes"
+            message = "Oops, you have Diabetes"
         
-        logging.info(f"prediction is {messege}")
+        logging.info(f"prediction is {message}")
 
-        return render_template('result.html', message = messege)
+        return render_template('result.html', message = message)
 
 
 
